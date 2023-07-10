@@ -125,13 +125,4 @@ public class LeagueTableTests {
     var newTeam = teams.get(random.nextInt(0, teams.size()));
     return newTeam.equals(home) ? getAwayTeam(home, teams) : newTeam;
   }
-
-  private void printTable(List<LeagueTableEntry> entries) {
-    entries.forEach(entry -> {
-      System.out.printf("\n=========== Team : %s ===========\n", entry.getTeamName());
-      System.out.printf("No. Played : %s, No. Won : %s, No. Drawn : %s, No. Lost : %s, Goals For : %s, Goals Against : %s, Goal Difference : %s, Points : %s\n", entry.getPlayed(), entry.getWon(), entry.getDrawn(), entry.getLost(), entry.getGoalsFor(), entry.getGoalsAgainst(), entry.getGoalDifference(), entry.getPoints());
-    });
-    System.out.println("\n");
-  }
-
 }
